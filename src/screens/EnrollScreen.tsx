@@ -28,9 +28,9 @@ export default function EnrollScreen() {
       const hasFace = await detectFace(photo.uri);
       if (hasFace) {
         setFaceDetected(true);
-        Alert.alert('Face Detected', 'Face captured successfully! Now tap Enroll.');
+        Alert.alert('Face Detected', 'Face captured! Now tap Enroll.');
       } else {
-        Alert.alert('No Face Found', 'Please position your face clearly in the frame.');
+        Alert.alert('No Face Found', 'Please position your face clearly.');
       }
     } catch (e) {
       Alert.alert('Error', 'Camera capture failed. Try again.');
@@ -58,7 +58,6 @@ export default function EnrollScreen() {
   return (
     <ScrollView style={styles.root} contentContainerStyle={styles.content}>
       <Text style={styles.title}>Enroll New Personnel</Text>
-
       <View style={styles.cameraContainer}>
         {!enrolled ? (
           <RNCamera
@@ -78,7 +77,6 @@ export default function EnrollScreen() {
           </View>
         )}
       </View>
-
       <TouchableOpacity
         style={[styles.captureBtn, capturing && { opacity: 0.5 }]}
         onPress={handleCapture}
@@ -88,7 +86,6 @@ export default function EnrollScreen() {
           {capturing ? 'Detecting...' : '📷 Capture Face'}
         </Text>
       </TouchableOpacity>
-
       <TextInput
         style={styles.input}
         placeholder="Full Name"
@@ -103,13 +100,10 @@ export default function EnrollScreen() {
         value={employeeId}
         onChangeText={setEmployeeId}
       />
-
       <TouchableOpacity style={styles.btn} onPress={handleEnroll}>
         <Text style={styles.btnText}>Enroll Face</Text>
       </TouchableOpacity>
-
       {enrolled && <Text style={styles.success}>✅ Enrolled successfully!</Text>}
-
       <TouchableOpacity style={styles.back} onPress={() => nav.goBack()}>
         <Text style={styles.backText}>← Back</Text>
       </TouchableOpacity>

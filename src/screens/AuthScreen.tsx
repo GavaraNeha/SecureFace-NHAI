@@ -91,11 +91,11 @@ export default function AuthScreen() {
               ))}
             </View>
             <TouchableOpacity
-              style={[styles.retryBtn, phase === 'VERIFYING' && { opacity: 0.5 }]}
+              style={[styles.btn, phase === 'VERIFYING' && { opacity: 0.5 }]}
               onPress={captureAndVerify}
               disabled={phase === 'VERIFYING'}
             >
-              <Text style={styles.retryText}>
+              <Text style={styles.btnText}>
                 {phase === 'VERIFYING' ? 'Verifying...' : 'Capture ✓'}
               </Text>
             </TouchableOpacity>
@@ -111,12 +111,12 @@ export default function AuthScreen() {
           {phase === 'FAIL' && (<>
             <Text style={styles.failIcon}>❌</Text>
             <Text style={styles.failText}>Authentication Failed</Text>
-            <TouchableOpacity style={styles.retryBtn} onPress={() => {
+            <TouchableOpacity style={styles.btn} onPress={() => {
               setPhase('CHALLENGE');
               setCurrentCIdx(0);
               setTimeLeft(CHALLENGE_TIMEOUT_MS / 1000);
             }}>
-              <Text style={styles.retryText}>Try Again</Text>
+              <Text style={styles.btnText}>Try Again</Text>
             </TouchableOpacity>
           </>)}
         </View>
@@ -146,6 +146,6 @@ const styles = StyleSheet.create({
   doneBtnText: { color: '#FFF', fontWeight: '700', fontSize: 16 },
   failIcon: { fontSize: 48, marginBottom: 8 },
   failText: { color: '#EF4444', fontSize: 20, fontWeight: '700' },
-  retryBtn: { marginTop: 16, backgroundColor: '#00B4D8', borderRadius: 12, paddingHorizontal: 40, paddingVertical: 12 },
-  retryText: { color: '#FFF', fontWeight: '700', fontSize: 16 },
+  btn: { marginTop: 16, backgroundColor: '#00B4D8', borderRadius: 12, paddingHorizontal: 40, paddingVertical: 12 },
+  btnText: { color: '#FFF', fontWeight: '700', fontSize: 16 },
 });
