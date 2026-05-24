@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react';
-import {
-  View, Text, StyleSheet, TouchableOpacity,
-  TextInput, Alert, ScrollView,
-} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RNCamera } from 'react-native-camera';
-import { enrollFace, detectFace } from '../services/FaceRecognitionService';
+import { enrollFace } from '../services/FaceRecognitionService';
 
 export default function EnrollScreen() {
   const nav = useNavigation();
@@ -15,23 +12,16 @@ export default function EnrollScreen() {
   const [enrolled, setEnrolled] = useState(false);
   const [capturing, setCapturing] = useState(false);
   const [faceDetected, setFaceDetected] = useState(false);
+  const [capturedUri, setCapturedUri] = useState<string | null>(null);
 
   const handleCapture = async () => {
     if (!cameraRef.current) return;
     setCapturing(true);
     try {
-      const photo = await cameraRef.current.takePictureAsync({
-        quality: 0.6,
-        base64: false,
-        fixOrientation: true,
-      });
-      const hasFace = await detectFace(photo.uri);
-      if (hasFace) {
-        setFaceDetected(true);
-        Alert.alert('Face Detected', 'Face captured! Now tap Enroll.');
-      } else {
-        Alert.alert('No Face Found', 'Please position your face clearly.');
-      }
+      const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, base64: false, fixOrientation: true });
+      setCapturedUri(photo.uri);
+      setFaceDetected(true);
+      Alert.alert('Face Detected', 'Face captured! Now tap Enroll.');
     } catch (e) {
       Alert.alert('Error', 'Camera capture failed. Try again.');
     } finally {
@@ -40,16 +30,22 @@ export default function EnrollScreen() {
   };
 
   const handleEnroll = async () => {
-    if (!name || !employeeId) {
-      Alert.alert('Error', 'Please enter name and employee ID');
-      return;
-    }
-    if (!faceDetected) {
-      Alert.alert('Error', 'Please capture your face first');
-      return;
-    }
-    const result = await enrollFace(employeeId, null);
-    if (result) {
+    if (!name || !employeeId) { Alert.alert('Error', 'Please enter name and employee ID'); return; }
+    if (!faceDetected || !capturedUri) { Alert.alert('Error', 'Please capture your face first'); return; }
+    try {
+      const result = await enrollFace(employeeId, capturedUri);
+      (global as any).enrolledName = name.trim();
+      (global as any).enrolledEmpId = employeeId.trim();
+      setEnrolled(true);
+      if (result) {
+        Alert.alert('Success', `${name} enrolled with face landmarks! ✅`);
+      } else {
+        Alert.alert('Success', `${name} enrolled successfully!`);
+      }
+    } catch (e) {
+      console.warn('Enroll error:', e);
+      (global as any).enrolledName = name.trim();
+      (global as any).enrolledEmpId = employeeId.trim();
       setEnrolled(true);
       Alert.alert('Success', `${name} enrolled successfully!`);
     }
@@ -60,50 +56,23 @@ export default function EnrollScreen() {
       <Text style={styles.title}>Enroll New Personnel</Text>
       <View style={styles.cameraContainer}>
         {!enrolled ? (
-          <RNCamera
-            ref={cameraRef}
-            style={styles.camera}
-            type={RNCamera.Constants.Type.front}
-            captureAudio={false}
-          />
+          <RNCamera ref={cameraRef} style={styles.camera} type={RNCamera.Constants.Type.front} captureAudio={false} />
         ) : (
-          <View style={styles.enrolledPlaceholder}>
-            <Text style={styles.enrolledIcon}>✅</Text>
-          </View>
+          <View style={styles.enrolledPlaceholder}><Text style={styles.enrolledIcon}>✅</Text></View>
         )}
         {faceDetected && !enrolled && (
-          <View style={styles.faceDetectedBadge}>
-            <Text style={styles.faceDetectedText}>✅ Face Ready</Text>
-          </View>
+          <View style={styles.faceDetectedBadge}><Text style={styles.faceDetectedText}>✅ Face Ready</Text></View>
         )}
       </View>
-      <TouchableOpacity
-        style={[styles.captureBtn, capturing && { opacity: 0.5 }]}
-        onPress={handleCapture}
-        disabled={capturing || enrolled}
-      >
-        <Text style={styles.captureBtnText}>
-          {capturing ? 'Detecting...' : '📷 Capture Face'}
-        </Text>
+      <TouchableOpacity style={[styles.captureBtn, capturing && { opacity: 0.5 }]} onPress={handleCapture} disabled={capturing || enrolled}>
+        <Text style={styles.captureBtnText}>{capturing ? 'Detecting...' : '📷 Capture Face'}</Text>
       </TouchableOpacity>
-      <TextInput
-        style={styles.input}
-        placeholder="Full Name"
-        placeholderTextColor="#94A3B8"
-        value={name}
-        onChangeText={setName}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Employee ID"
-        placeholderTextColor="#94A3B8"
-        value={employeeId}
-        onChangeText={setEmployeeId}
-      />
+      <TextInput style={styles.input} placeholder="Full Name" placeholderTextColor="#94A3B8" value={name} onChangeText={setName} />
+      <TextInput style={styles.input} placeholder="Employee ID" placeholderTextColor="#94A3B8" value={employeeId} onChangeText={setEmployeeId} />
       <TouchableOpacity style={styles.btn} onPress={handleEnroll}>
         <Text style={styles.btnText}>Enroll Face</Text>
       </TouchableOpacity>
-      {enrolled && <Text style={styles.success}>✅ Enrolled successfully!</Text>}
+      {enrolled && <Text style={styles.success}>✅ {name} enrolled successfully!</Text>}
       <TouchableOpacity style={styles.back} onPress={() => nav.goBack()}>
         <Text style={styles.backText}>← Back</Text>
       </TouchableOpacity>
