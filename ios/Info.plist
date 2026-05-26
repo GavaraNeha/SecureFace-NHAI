@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ios/SecureFace/Info.plist additions
+  Add these keys to your existing Info.plist to request runtime permissions.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Camera access -->
+    <key>NSCameraUsageDescription</key>
+    <string>SecureFace uses the front camera for face recognition and liveness detection to authenticate field personnel.</string>
+
+    <!-- Location (optional, for tagging attendance) -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>SecureFace can tag attendance records with your GPS location for audit purposes.</string>
+
+    <!-- Face ID (if using biometric fallback) -->
+    <key>NSFaceIDUsageDescription</key>
+    <string>SecureFace uses Face ID as a fallback authentication method.</string>
+
+    <!-- App transport security – allow AWS endpoints -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>amazonaws.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- Background fetch for sync (optional) -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+    </array>
+</dict>
+</plist>

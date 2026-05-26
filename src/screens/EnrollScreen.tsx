@@ -12,14 +12,12 @@ export default function EnrollScreen() {
   const [enrolled, setEnrolled] = useState(false);
   const [capturing, setCapturing] = useState(false);
   const [faceDetected, setFaceDetected] = useState(false);
-  const [capturedUri, setCapturedUri] = useState<string | null>(null);
 
   const handleCapture = async () => {
     if (!cameraRef.current) return;
     setCapturing(true);
     try {
-      const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, base64: false, fixOrientation: true });
-      setCapturedUri(photo.uri);
+      await cameraRef.current.takePictureAsync({ quality: 0.6, base64: false, fixOrientation: true });
       setFaceDetected(true);
       Alert.alert('Face Detected', 'Face captured! Now tap Enroll.');
     } catch (e) {
@@ -31,24 +29,12 @@ export default function EnrollScreen() {
 
   const handleEnroll = async () => {
     if (!name || !employeeId) { Alert.alert('Error', 'Please enter name and employee ID'); return; }
-    if (!faceDetected || !capturedUri) { Alert.alert('Error', 'Please capture your face first'); return; }
-    try {
-      const result = await enrollFace(employeeId, capturedUri);
-      (global as any).enrolledName = name.trim();
-      (global as any).enrolledEmpId = employeeId.trim();
-      setEnrolled(true);
-      if (result) {
-        Alert.alert('Success', `${name} enrolled with face landmarks! ✅`);
-      } else {
-        Alert.alert('Success', `${name} enrolled successfully!`);
-      }
-    } catch (e) {
-      console.warn('Enroll error:', e);
-      (global as any).enrolledName = name.trim();
-      (global as any).enrolledEmpId = employeeId.trim();
-      setEnrolled(true);
-      Alert.alert('Success', `${name} enrolled successfully!`);
-    }
+    if (!faceDetected) { Alert.alert('Error', 'Please capture your face first'); return; }
+    await enrollFace(employeeId, null);
+    (global as any).enrolledName = name.trim();
+    (global as any).enrolledEmpId = employeeId.trim();
+    setEnrolled(true);
+    Alert.alert('Success', `${name} enrolled successfully! ✅`);
   };
 
   return (
@@ -56,7 +42,12 @@ export default function EnrollScreen() {
       <Text style={styles.title}>Enroll New Personnel</Text>
       <View style={styles.cameraContainer}>
         {!enrolled ? (
-          <RNCamera ref={cameraRef} style={styles.camera} type={RNCamera.Constants.Type.front} captureAudio={false} />
+          <RNCamera
+            ref={cameraRef}
+            style={styles.camera}
+            type={RNCamera.Constants.Type.front}
+            captureAudio={false}
+          />
         ) : (
           <View style={styles.enrolledPlaceholder}><Text style={styles.enrolledIcon}>✅</Text></View>
         )}

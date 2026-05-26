@@ -1,0 +1,239 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tempapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:3:5-67
+11-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[:react-native-community_netinfo] C:\SecureFace_Project\SecureFace\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-79
+12-->[:react-native-community_netinfo] C:\SecureFace_Project\SecureFace\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[:react-native-community_netinfo] C:\SecureFace_Project\SecureFace\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-76
+13-->[:react-native-community_netinfo] C:\SecureFace_Project\SecureFace\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-73
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:7:5-65
+14-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:7:22-62
+15
+16    <uses-feature
+16-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:9:5-11:36
+17        android:name="android.hardware.camera"
+17-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:10:9-47
+18        android:required="false" />
+18-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:11:9-33
+19    <uses-feature
+19-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:12:5-14:36
+20        android:name="android.hardware.camera.autofocus"
+20-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:13:9-57
+21        android:required="false" />
+21-->[:react-native-camera] C:\SecureFace_Project\SecureFace\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\processGeneralDebugManifest\AndroidManifest.xml:14:9-33
+22
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->[:react-native-fs] C:\SecureFace_Project\SecureFace\node_modules\react-native-fs\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-81
+23-->[:react-native-fs] C:\SecureFace_Project\SecureFace\node_modules\react-native-fs\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-78
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25    <!--
+26    This manifest file is used only by Gradle to configure debug-only capabilities
+27    for React Native Apps.
+28    -->
+29    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+29-->[com.facebook.react:react-android:0.73.0] C:\Users\gavar\.gradle\caches\transforms-4\187a5fca02958bf6b8f8ef53207ad57d\transformed\jetified-react-android-0.73.0-debug\AndroidManifest.xml:16:5-78
+29-->[com.facebook.react:react-android:0.73.0] C:\Users\gavar\.gradle\caches\transforms-4\187a5fca02958bf6b8f8ef53207ad57d\transformed\jetified-react-android-0.73.0-debug\AndroidManifest.xml:16:22-75
+30
+31    <permission
+31-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+32        android:name="com.tempapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.tempapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:5:5-24:19
+38        android:name="com.tempapp.MainApplication"
+38-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:6:7-38
+39        android:allowBackup="false"
+39-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:10:7-34
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.9.0] C:\Users\gavar\.gradle\caches\transforms-4\6ebe91d97d3356710186762e64bb70f5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:8:7-41
+44        android:label="@string/app_name"
+44-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:7:7-39
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:9:7-52
+46        android:theme="@style/AppTheme"
+46-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:11:7-38
+47        android:usesCleartextTraffic="true" >
+47-->C:\SecureFace_Project\SecureFace\android\app\src\debug\AndroidManifest.xml:6:9-44
+48        <activity
+48-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:12:7-23:18
+49            android:name="com.tempapp.MainActivity"
+49-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:13:9-37
+50            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+50-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:15:9-118
+51            android:exported="true"
+51-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:18:9-32
+52            android:label="@string/app_name"
+52-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:14:9-41
+53            android:launchMode="singleTask"
+53-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:16:9-40
+54            android:windowSoftInputMode="adjustResize" >
+54-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:17:9-51
+55            <intent-filter>
+55-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:19:9-22:25
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:20:13-65
+56-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:20:21-62
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:21:13-73
+58-->C:\SecureFace_Project\SecureFace\android\app\src\main\AndroidManifest.xml:21:23-70
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->[com.facebook.react:react-android:0.73.0] C:\Users\gavar\.gradle\caches\transforms-4\187a5fca02958bf6b8f8ef53207ad57d\transformed\jetified-react-android-0.73.0-debug\AndroidManifest.xml:19:9-21:40
+62            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+62-->[com.facebook.react:react-android:0.73.0] C:\Users\gavar\.gradle\caches\transforms-4\187a5fca02958bf6b8f8ef53207ad57d\transformed\jetified-react-android-0.73.0-debug\AndroidManifest.xml:20:13-77
+63            android:exported="false" />
+63-->[com.facebook.react:react-android:0.73.0] C:\Users\gavar\.gradle\caches\transforms-4\187a5fca02958bf6b8f8ef53207ad57d\transformed\jetified-react-android-0.73.0-debug\AndroidManifest.xml:21:13-37
+64
+65        <service
+65-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:9:9-15:19
+66            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+66-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:10:13-91
+67            android:directBootAware="true"
+67-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:17:13-43
+68            android:exported="false" >
+68-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:11:13-37
+69            <meta-data
+69-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:12:13-14:85
+70                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+70-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:13:17-120
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\gavar\.gradle\caches\transforms-4\e2c5f55e002cd229cb37364681c79c13\transformed\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:14:17-82
+72            <meta-data
+72-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\gavar\.gradle\caches\transforms-4\e8a777efaa6da5fb756acdcb73425e56\transformed\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:12:13-14:85
+73                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+73-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\gavar\.gradle\caches\transforms-4\e8a777efaa6da5fb756acdcb73425e56\transformed\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:13:17-114
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\gavar\.gradle\caches\transforms-4\e8a777efaa6da5fb756acdcb73425e56\transformed\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:14:17-82
+75            <meta-data
+75-->[com.google.android.gms:play-services-mlkit-face-detection:17.1.0] C:\Users\gavar\.gradle\caches\transforms-4\5fd58db4f0ad2df9e341b9d4ebebac8e\transformed\jetified-play-services-mlkit-face-detection-17.1.0\AndroidManifest.xml:12:13-14:85
+76                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+76-->[com.google.android.gms:play-services-mlkit-face-detection:17.1.0] C:\Users\gavar\.gradle\caches\transforms-4\5fd58db4f0ad2df9e341b9d4ebebac8e\transformed\jetified-play-services-mlkit-face-detection-17.1.0\AndroidManifest.xml:13:17-114
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.android.gms:play-services-mlkit-face-detection:17.1.0] C:\Users\gavar\.gradle\caches\transforms-4\5fd58db4f0ad2df9e341b9d4ebebac8e\transformed\jetified-play-services-mlkit-face-detection-17.1.0\AndroidManifest.xml:14:17-82
+78            <meta-data
+78-->[com.google.mlkit:vision-common:17.2.0] C:\Users\gavar\.gradle\caches\transforms-4\5881c56d102d7be94728ebe6947fd352\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:12:13-14:85
+79                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+79-->[com.google.mlkit:vision-common:17.2.0] C:\Users\gavar\.gradle\caches\transforms-4\5881c56d102d7be94728ebe6947fd352\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:13:17-124
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.mlkit:vision-common:17.2.0] C:\Users\gavar\.gradle\caches\transforms-4\5881c56d102d7be94728ebe6947fd352\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:14:17-82
+81            <meta-data
+81-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:20:13-22:85
+82                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+82-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:21:17-120
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:22:17-82
+84        </service>
+85
+86        <provider
+86-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:9:9-13:38
+87            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+87-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:10:13-78
+88            android:authorities="com.tempapp.mlkitinitprovider"
+88-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:11:13-69
+89            android:exported="false"
+89-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:12:13-37
+90            android:initOrder="99" />
+90-->[com.google.mlkit:common:18.11.0] C:\Users\gavar\.gradle\caches\transforms-4\5b6515a7b8a79bb06443e735ff23f711\transformed\jetified-common-18.11.0\AndroidManifest.xml:13:13-35
+91
+92        <activity
+92-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gavar\.gradle\caches\transforms-4\1dc3fbdf0472a7729a204887e21969e2\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+93            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+93-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gavar\.gradle\caches\transforms-4\1dc3fbdf0472a7729a204887e21969e2\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+94            android:exported="false"
+94-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gavar\.gradle\caches\transforms-4\1dc3fbdf0472a7729a204887e21969e2\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+95            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+95-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gavar\.gradle\caches\transforms-4\1dc3fbdf0472a7729a204887e21969e2\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+96
+97        <meta-data
+97-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gavar\.gradle\caches\transforms-4\7c353f1d9aacbe74f4834c8c52232855\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+98            android:name="com.google.android.gms.version"
+98-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gavar\.gradle\caches\transforms-4\7c353f1d9aacbe74f4834c8c52232855\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+99            android:value="@integer/google_play_services_version" />
+99-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gavar\.gradle\caches\transforms-4\7c353f1d9aacbe74f4834c8c52232855\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+100
+101        <provider
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+102            android:name="androidx.startup.InitializationProvider"
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+103            android:authorities="com.tempapp.androidx-startup"
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+104            android:exported="false" >
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+105            <meta-data
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+106                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+107                android:value="androidx.startup" />
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavar\.gradle\caches\transforms-4\277a52e2a24a24d8dc8ee9f7fe9de837\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+108            <meta-data
+108-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavar\.gradle\caches\transforms-4\70686f5922f146749b8643f1f656e8c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+109                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+109-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavar\.gradle\caches\transforms-4\70686f5922f146749b8643f1f656e8c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+110                android:value="androidx.startup" />
+110-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavar\.gradle\caches\transforms-4\70686f5922f146749b8643f1f656e8c2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+111        </provider>
+112
+113        <service
+113-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+114            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+114-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+115            android:exported="false" >
+115-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+116            <meta-data
+116-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+117                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+117-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+118                android:value="cct" />
+118-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\gavar\.gradle\caches\transforms-4\2c709c9d4e6f5651f6db4d9f2c87eb17\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+119        </service>
+120        <service
+120-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+121            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+121-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+122            android:exported="false"
+122-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+123            android:permission="android.permission.BIND_JOB_SERVICE" >
+123-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+124        </service>
+125
+126        <receiver
+126-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+127            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+127-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+128            android:exported="false" />
+128-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\gavar\.gradle\caches\transforms-4\16ae17f4ae2f52d36a5e13f9e83681bd\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+129
+130        <meta-data
+130-->[com.facebook.soloader:soloader:0.10.5] C:\Users\gavar\.gradle\caches\transforms-4\b46091d574c1d7ffc1f54bda9b8526be\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+131            android:name="com.facebook.soloader.enabled"
+131-->[com.facebook.soloader:soloader:0.10.5] C:\Users\gavar\.gradle\caches\transforms-4\b46091d574c1d7ffc1f54bda9b8526be\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
+132            android:value="false" />
+132-->[com.facebook.soloader:soloader:0.10.5] C:\Users\gavar\.gradle\caches\transforms-4\b46091d574c1d7ffc1f54bda9b8526be\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+133    </application>
+134
+135</manifest>
